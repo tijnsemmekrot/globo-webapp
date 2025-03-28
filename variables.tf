@@ -32,9 +32,9 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-variable "api_key" {
+variable "api_key_secret_id" {
   type        = string
-  description = "(Required) API key for web app to talk to SaaS platform."
+  description = "(Required) Secret id for the API key for web app to talk to SaaS platform."
 }
 
 variable "tfe_workspace" {
@@ -45,6 +45,11 @@ variable "tfe_workspace" {
 variable "tfe_organization" {
   type        = string
   description = "(Required) Terraform Cloud organization to use for remote state."
+}
+
+variable "ec2_role_name" {
+  type        = string
+  description = "(Required) Name of IAM Role to attach to EC2 instances."
 }
 
 variable "playbook_repository" {
