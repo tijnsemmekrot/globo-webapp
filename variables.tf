@@ -46,3 +46,8 @@ variable "tfe_organization" {
   type        = string
   description = "(Required) Terraform Cloud organization to use for remote state."
 }
+
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) URI of Repository to use for Ansible playbooks."
+}
